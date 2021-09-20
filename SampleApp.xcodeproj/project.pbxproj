@@ -102,26 +102,58 @@
 		FB433B9526F6D4DD0024F4EB /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				FB433BAC26F6DB480024F4EB /* APIInteractionClass.swift */,
-				FB433B9626F6D4DE0024F4EB /* AppDelegate.swift */,
-				FB433B9826F6D4DE0024F4EB /* SceneDelegate.swift */,
+				FB927A4926F8441300A851F3 /* Utility */,
+				FB927A4826F843CE00A851F3 /* AppDelegate */,
+				FB927A4726F843B800A851F3 /* ViewController */,
+				FB927A4A26F8447600A851F3 /* Storyboards */,
+				FB433B9F26F6D4E20024F4EB /* Assets.xcassets */,
+				FB433BA426F6D4E20024F4EB /* Info.plist */,
+			);
+			path = SampleApp;
+			sourceTree = "<group>";
+		};
+		FB927A4726F843B800A851F3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
 				FB433B9A26F6D4DE0024F4EB /* ViewController.swift */,
 				FB433BB426F6F3B30024F4EB /* ViewPresenter.swift */,
 				FB433BB626F6F3C60024F4EB /* ViewInteractor.swift */,
 				FB433BB826F6F3D40024F4EB /* ViewProtocals.swift */,
 				FB433BBE26F7067E0024F4EB /* HitsTableViewCell.swift */,
-				FB433BBC26F6FB2C0024F4EB /* CommanClass.swift */,
 				FB433BB226F6DB8C0024F4EB /* Router.swift */,
 				FB433BAA26F6D7D10024F4EB /* HitsModel.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FB927A4826F843CE00A851F3 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FB433B9626F6D4DE0024F4EB /* AppDelegate.swift */,
+				FB433B9826F6D4DE0024F4EB /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FB927A4926F8441300A851F3 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				FB433BAC26F6DB480024F4EB /* APIInteractionClass.swift */,
+				FB433BBC26F6FB2C0024F4EB /* CommanClass.swift */,
 				FB433BAE26F6DB720024F4EB /* Reachability.swift */,
 				FB433BBA26F6F9230024F4EB /* InternetStatusClass.swift */,
 				FB433BB026F6DB7B0024F4EB /* Toast.swift */,
-				FB433B9C26F6D4DE0024F4EB /* Main.storyboard */,
-				FB433B9F26F6D4E20024F4EB /* Assets.xcassets */,
-				FB433BA126F6D4E20024F4EB /* LaunchScreen.storyboard */,
-				FB433BA426F6D4E20024F4EB /* Info.plist */,
 			);
-			path = SampleApp;
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		FB927A4A26F8447600A851F3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FB433B9C26F6D4DE0024F4EB /* Main.storyboard */,
+				FB433BA126F6D4E20024F4EB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

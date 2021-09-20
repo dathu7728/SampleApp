@@ -66,7 +66,7 @@ extension Router: Routable {
     
     func navigateToBrowsePage(){
         
-//        guard let registerController = getStoryBoard().instantiateViewController(withIdentifier: "CancelAppointmentViewController") as? CancelAppointmentViewController else {
+//        guard let registerController = getStoryBoard().instantiateViewController(withIdentifier: "BrowseViewController") as? BrowseViewController else {
 //            return
 //        }
 //        navigateTo(registerController, animation: false)
