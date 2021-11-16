@@ -24,8 +24,8 @@ class InternetStatusClass: NSObject {
         reachability = Reachability(hostname: "www.google.com")
         reachabilityChanged()
         NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged),
-        name: reachabilityChangedNotification,
-        object: reachability)
+                                               name: reachabilityChangedNotification,
+                                               object: reachability)
         do {
             try reachability.startNotifier()
         } catch {
@@ -40,29 +40,29 @@ class InternetStatusClass: NSObject {
             isConnected = false
         } else {
             isConnected = true
-    //UIApplication.statusBarBackgroundColor = appThemeColor
-    // NotificationCenter.default.post(Notification.init(name:  wifiStatusNotification))
-     //isConnectedToNetwork(completionHandler: {(status) in
-    //              self.isConnected = status
-   //              NotificationCenter.default.post(Notification.init(name:
-  //         wifiStatusNotification))
- //          }
-//
+            //UIApplication.statusBarBackgroundColor = appThemeColor
+            // NotificationCenter.default.post(Notification.init(name:  wifiStatusNotification))
+            //isConnectedToNetwork(completionHandler: {(status) in
+            //              self.isConnected = status
+            //              NotificationCenter.default.post(Notification.init(name:
+            //         wifiStatusNotification))
+            //          }
+            //
         }
         
-       // NotificationCenter.default.post(Notification.init(name: wifiStatusNotification))
+        // NotificationCenter.default.post(Notification.init(name: wifiStatusNotification))
         
     }
     
-//    func getWiFiSsid() -> String? {
-//        guard let interfaces = CNCopySupportedInterfaces() as? [String] else { return nil }
-//        let key = kCNNetworkInfoKeySSID as String
-//        for interface in interfaces {
-//            guard let interfaceInfo = CNCopyCurrentNetworkInfo(interface as CFString) as NSDictionary? else { continue }
-//            return interfaceInfo[key] as? String
-//        }
-//        return nil
-//    }
+    //    func getWiFiSsid() -> String? {
+    //        guard let interfaces = CNCopySupportedInterfaces() as? [String] else { return nil }
+    //        let key = kCNNetworkInfoKeySSID as String
+    //        for interface in interfaces {
+    //            guard let interfaceInfo = CNCopyCurrentNetworkInfo(interface as CFString) as NSDictionary? else { continue }
+    //            return interfaceInfo[key] as? String
+    //        }
+    //        return nil
+    //    }
     
     public func isConnectedToNetwork(completionHandler:@escaping (Bool) -> Void) {
         

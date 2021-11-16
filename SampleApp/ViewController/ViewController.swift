@@ -9,17 +9,18 @@ import UIKit
 
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     var presenter: ViewPresenter?
-
+    
     var refreshControl = UIRefreshControl()
-
+    
     var hitsFilter  = [hitsDic]()
     var isFilter = false
-
+    
     @IBOutlet weak var titleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setCleanArch()
@@ -31,7 +32,6 @@ class ViewController: UIViewController {
     
     func executeTheAPI(type:String) {
         progressLoading()
-        
         presenter?.checkTheHitsAPI(queryType: type)
     }
     
@@ -44,47 +44,47 @@ class ViewController: UIViewController {
         interactor.presenter = presenter
         presenter?.router = Router.shared
     }
-
-
+    
+    
     @IBAction func sectionButtonAction(_ sender: Any) {
         selectionForNewsList()
     }
     
     func selectionForNewsList() {
-
+        
         let optionMenu = UIAlertController(title: "Select the type for news", message: nil, preferredStyle: .actionSheet)
         optionMenu.popoverPresentationController?.sourceView = self.view
         let Sports = UIAlertAction(title: "Sports", style: .default) { (alert : UIAlertAction!) in
             self.titleLabel.text = "Sports List"
-
+            
             self.executeTheAPI(type: "Sports")
         }
         
         let Politics = UIAlertAction(title: "Politics", style: .default) { (alert : UIAlertAction!) in
             self.titleLabel.text = "Politics List"
-
+            
             self.executeTheAPI(type: "Politics")
-
+            
         }
         
         let Bollywood = UIAlertAction(title: "Bollywood", style: .default) { (alert : UIAlertAction!) in
             self.titleLabel.text = "Bollywood List"
-
+            
             self.executeTheAPI(type: "Bollywood")
-
-
+            
+            
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (alert : UIAlertAction!) in
         }
         
-       
+        
         
         optionMenu.addAction(Sports)
         optionMenu.addAction(Bollywood)
         optionMenu.addAction(Politics)
         optionMenu.addAction(cancelAction)
-
+        
         
         if let popoverController = optionMenu.popoverPresentationController {
             popoverController.sourceView = self.view

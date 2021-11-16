@@ -23,7 +23,10 @@ class ViewPresenter: ViewToPresenterProtocal {
         }
         
         interector?.executeTheHitsAPI(queryType: queryType)
+        
+        
     }
+    
     
 
 }

@@ -13,7 +13,7 @@ class Router {
     static let shared = Router()
     private var navigationController = UINavigationController()
     private var storyBoard = UIStoryboard()
-
+    
     func setStoryBoard(storyBoard: UIStoryboard?)  {
         guard let storyboardObj = storyBoard else {
             return
