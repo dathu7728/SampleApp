@@ -13,6 +13,7 @@ protocol ViewToPresenterProtocal: class {
     var interector: ViewPresentorToInterectorProtocol? {get set}
     
     func checkTheHitsAPI(queryType:String)
+    
 
     
 }

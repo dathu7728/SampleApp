@@ -29,7 +29,7 @@ func communicateWithBackendForResponseData(endPoint: String,
     configuration.timeoutIntervalForRequest = 20
     configuration.timeoutIntervalForResource = 15
     configuration.httpShouldUsePipelining = true
-    
+
     alamoFireManager = Session(configuration: configuration, startRequestsImmediately: true)
     
     //configuration.httpAdditionalHeaders = headers
