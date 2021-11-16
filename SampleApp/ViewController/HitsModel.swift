@@ -87,9 +87,9 @@ struct story_textDic:Decodable {
 
 
 class HitsModel: NSObject {
-
+    
     var FetchHitsList = [hitsDic]()
-  
+    
     class var sharedInstance : HitsModel {
         struct Singleton {
             static let instance = HitsModel()
