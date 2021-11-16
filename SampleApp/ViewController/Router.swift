@@ -33,9 +33,11 @@ class Router {
         
         self.navigationController = nController
     }
+    
     private func navigator() -> UINavigationController {
         return navigationController
     }
+    
     private func begin(withController controller: UIViewController) { // For App delegate  navigation controller (Programtical)
         navigationController = UINavigationController(rootViewController: controller)
     }
